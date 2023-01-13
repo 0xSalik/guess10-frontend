@@ -1,0 +1,11 @@
+.guess10-container {
+  display: flex;
+}
+.question-container {
+  flex: 1;
+}
+.answers-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #171717;
+}
