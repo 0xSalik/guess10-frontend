@@ -14,7 +14,9 @@ const Guess10 = (props) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:3000/guess10");
+        const response = await axios.get(
+          "https://guess10-backend.vercel.app/api/guess10"
+        );
         setCategory(response.data.category);
         setItems(response.data.items);
         setTotal(response.data.items.length);
