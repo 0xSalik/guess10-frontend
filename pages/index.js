@@ -115,6 +115,20 @@ const Guess10 = (props) => {
           </div>
         )}
       </div>
+      <footer>
+        <p>
+          Copyright &copy; 2023 <a href="https://salikkhan.com">Salik Khan.</a>
+        </p>
+        Source Code:
+        <li>
+          <a href="https://github.com/thesalikkhan/guess10-frontend">
+            Frontend
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/thesalikkhan/guess10-backend">Backend</a>
+        </li>
+      </footer>
     </>
   );
 };
