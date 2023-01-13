@@ -88,7 +88,7 @@ const Guess10 = (props) => {
           {tries === 10 && score !== 10 && <p>You only get 10 tries ☹️</p>}
           <form onSubmit={handleSubmit}>
             <input
-              required="true"
+              required={true}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Enter your answer"
@@ -105,7 +105,7 @@ const Guess10 = (props) => {
           </form>
         </div>
         <div className={`answers-container ${isMobile ? "mobile-layout" : ""}`}>
-          <h2>Submitted Answers</h2>
+          <h3>Submitted Answers</h3>
           <ul>
             {answers.map((answer, index) => (
               <li key={index}>
@@ -130,6 +130,9 @@ const Guess10 = (props) => {
         )}
       </div>
       <div className={`footer ${isMobile ? "footer-mobile-layout" : ""}`}>
+        <p>
+          <a href="https://api.guess10.xyz">API</a>
+        </p>
         <p>
           Copyright &copy; 2023 <a href="https://salikkhan.com">Salik Khan.</a>
         </p>
