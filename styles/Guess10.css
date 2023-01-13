@@ -9,3 +9,12 @@
   padding: 20px;
   background-color: #171717;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
