@@ -73,7 +73,7 @@ const Guess10 = (props) => {
       <div className="guess10-container">
         {score === 10 && <Confetti />}
         <div className="question-container">
-          <h3>{category}</h3>
+          <h4>{category}</h4>
           {error && <p style={{ color: "red" }}>{error}</p>}
           <form onSubmit={handleSubmit}>
             <input
