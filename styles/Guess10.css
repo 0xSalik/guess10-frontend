@@ -14,10 +14,13 @@
   text-align: center;
   width: 100%;
   margin-bottom: 0;
-  margin-top: 500px;
+  margin-top: 300px;
   font-size: medium;
 }
 .mobile-layout {
   position: absolute;
   margin-top: 550px;
+}
+.footer-mobile-layout {
+  margin-top: 500px;
 }
