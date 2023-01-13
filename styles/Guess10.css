@@ -14,15 +14,10 @@
   text-align: center;
   width: 100%;
   margin-bottom: 0;
-  margin-top: 300px;
+  margin-top: 500px;
   font-size: medium;
 }
-@media (max-width: 480px) {
-  .answers-container {
-    order: 2;
-  }
-
-  .show-answers-container {
-    order: 3;
-  }
+.mobile-layout {
+  position: absolute;
+  margin-top: 550px;
 }

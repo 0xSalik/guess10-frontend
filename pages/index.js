@@ -10,7 +10,7 @@ const Guess10 = (props) => {
   const [total, setTotal] = useState(null);
   const [error, setError] = useState(null);
   const [showAnswers, setShowAnswers] = useState(false);
-
+  const [tries, setTries] = useState(0);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -29,6 +29,7 @@ const Guess10 = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setTries(tries + 1);
     const userAnswers = inputValue.split(",");
     const duplicate = answers.find((answer) => answer.answer === inputValue);
     if (duplicate) {
@@ -57,7 +58,15 @@ const Guess10 = (props) => {
   const handleShowAnswers = () => {
     setShowAnswers(!showAnswers);
   };
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    if (window.innerWidth < 480) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
   return (
     <>
       <center>
@@ -76,14 +85,18 @@ const Guess10 = (props) => {
           <h3>{category}</h3>
           <br />
           {error && <p style={{ color: "red" }}>{error}</p>}
+          {tries === 10 && score !== 10 && <p>You only get 10 tries ☹️</p>}
           <form onSubmit={handleSubmit}>
             <input
+              required="true"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Enter your answer"
             />{" "}
             &nbsp;
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={tries === 10 && score !== 10}>
+              Submit
+            </button>
             {score !== null && (
               <p>
                 You scored {score} out of {total}
@@ -91,7 +104,7 @@ const Guess10 = (props) => {
             )}
           </form>
         </div>
-        <div className="answers-container">
+        <div className={`answers-container ${isMobile ? "mobile-layout" : ""}`}>
           <h2>Submitted Answers</h2>
           <ul>
             {answers.map((answer, index) => (
@@ -116,7 +129,7 @@ const Guess10 = (props) => {
           </div>
         )}
       </div>
-      <div className="footer">
+      <div className={`footer ${isMobile ? "footer-mobile-layout" : ""}`}>
         <p>
           Copyright &copy; 2023 <a href="https://salikkhan.com">Salik Khan.</a>
         </p>
