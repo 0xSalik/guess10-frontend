@@ -17,3 +17,12 @@
   margin-top: 300px;
   font-size: medium;
 }
+@media (max-width: 480px) {
+  .answers-container {
+    order: 2;
+  }
+
+  .show-answers-container {
+    order: 3;
+  }
+}
