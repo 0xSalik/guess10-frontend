@@ -1,5 +1,5 @@
 # Frontend for Guess10
-
+![status](https://uptime.sal.lol/api/badge/16/status)
 Written in Next.js
 
 ## To deploy
