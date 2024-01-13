@@ -134,7 +134,7 @@ const Guess10 = (props) => {
           <a href="https://api.guess10.xyz">API</a>
         </p>
         <p>
-          Copyright &copy; 2023 <a href="https://salikkhan.com">Salik Khan.</a>
+          Copyright &copy; 2024 <a href="https://salikkhan.com">Salik Khan.</a>
         </p>
         Source Code: &nbsp;
         <a href="https://github.com/thesalikkhan/guess10-frontend">
